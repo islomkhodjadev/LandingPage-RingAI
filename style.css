@@ -1,0 +1,725 @@
+/* Resetting some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body, html {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #acdaff, #f8fafc);
+    color: #111;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+/* Brand container styling */
+.brand {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the entire brand content */
+    text-align: center; /* Center text within brand */
+    gap: 10px; /* Space between each element */
+}
+
+/* Logo and name container styling */
+.logo-name {
+    display: flex;
+    align-items: center; /* Align logo and name vertically centered */
+    gap: 10px; /* Space between logo and brand name */
+}
+
+/* Logo icon styling */
+.logo-icon {
+    width: 50px; /* Set the size of the logo */
+    height: 50px;
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the image fills the circle */
+}
+
+/* Brand name styling */
+.logo-name h1 {
+    font-size: 4rem;
+    color: #111;
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+}
+
+/* Trademark symbol styling */
+.trademark {
+    font-size: 1.2rem;
+    vertical-align: super;
+}
+/* Typing Effect */
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.5rem; /* Matches the original styling */
+    color: #111; /* Original text color */
+    border-right: 3px solid #111; /* Blinking cursor */
+    animation: typing 3s steps(22, end), blink 0.6s step-end infinite;
+    /* typing: 3s duration, 22 steps for each character (adjust as needed) */
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Keyframes for blinking cursor */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
+
+nav a {
+    margin-left: 30px;
+    font-size: 1.2rem;
+    color: #111;
+    text-decoration: none;
+}
+
+nav .icons {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.icon, .menu-icon {
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.glow-text {
+    font-size: 16rem; /* Large font size for "AI" */
+    font-weight: bold;
+    color: transparent; /* Solid black text */
+    position: relative;
+    -webkit-text-stroke: 4px transparent; /* Border width */
+    animation: strokeColorChange 6s linear infinite; /* Slower animation with 60 seconds duration */
+/* Infinite color-changing animation */
+}
+
+/* Pseudo-element for animated stroke effect */
+.glow-text::before {
+    content: 'AI';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent; /* Keep the text transparent */
+    -webkit-text-stroke: 4px; /* Border width */
+    animation: strokeColorChange 15s linear infinite;
+}
+
+/* Keyframes to animate the border color */
+@keyframes strokeColorChange {
+    0% {
+        -webkit-text-stroke-color: #005aab; /* Primary Dark Blue */
+    }
+    33% {
+        -webkit-text-stroke-color: #66c0f4; /* Accent Light Blue */
+    }
+    66% {
+        -webkit-text-stroke-color: #ffffff; /* White */
+    }
+    100% {
+        -webkit-text-stroke-color: #005aab; /* Back to Primary Dark Blue */
+    }
+}
+
+
+.cta p {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #333;
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* About Section Container */
+.about-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Individual Block Styling */
+.about-block {
+    display: flex;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glassy look */
+}
+
+
+/* Text Section Styling */
+.about-text {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #3d3d3d; /* Softer white for readability */
+}
+
+.about-text a {
+    font-size: 1rem;
+    color: #66c0f4; /* Brand blue accent for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.about-text a:hover {
+    color: #ffffff; /* Change to white on hover */
+}
+
+/* Image Section Styling */
+.about-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-block {
+        flex-direction: column; /* Stack text and image vertically on smaller screens */
+    }
+
+    .about-image {
+        max-height: 300px; /* Limit image height on mobile for better layout */
+    }
+}
+
+
+
+/* Partners Section Styling */
+.partners-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.partners-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #005aab; /* Brand color for heading */
+}
+
+/* Grid Layout */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Partner Card Styling */
+.partner-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+.partner-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* Title and Subtitle Styling */
+.partner-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.partner-card p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Services Section Styling */
+.services-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #005aab;
+}
+
+.services-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Service Item Card Styling */
+.service-item {
+    width: 280px; /* Set a fixed width for consistency */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Section */
+.service-media img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Content Section */
+.service-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.service-content h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+.secondary-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.supporting-text {
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1.4;
+}
+/* Specific styling for the contact form section */
+section.contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Styling for the form container */
+  .contact-form-section .form-container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+  }
+  
+  .contact-form-section .form-container h2 {
+    color: #007bff;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .contact-form-section .form-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form-section .form-container .form-group label {
+    color: #555;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+  }
+  
+  .contact-form-section .form-container .form-group input,
+  .contact-form-section .form-container .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form-section .form-container .form-group input:focus,
+  .contact-form-section .form-container .form-group textarea:focus {
+    border-color: #007bff;
+    background: #ffffff;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Button styling */
+  .contact-form-section .form-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #ffffff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form-section .form-container button:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+  }
+  
+
+  /* Section styling */
+.technologies-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.technologies-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grid container styling */
+.tech-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual technology item styling */
+.tech-item {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+.tech-item img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 10px;
+}
+
+.tech-item p {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 150; /* Ensure hamburger is always on top */
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #111;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+/* Footer Styling */
+.footer-section {
+    background-color: #111;
+    color: #f8fafc;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-brand {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.footer-brand img.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #acdaff;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1 1 150px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    color: #66c0f4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-contact p a {
+    color: #66c0f4;
+    text-decoration: none;
+}
+
+.footer-social .social-icons a {
+    margin-right: 15px;
+}
+
+.footer-social .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social .social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #acdaff;
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #acdaff, #f8fafc);
+        box-shadow: none;
+        border-radius: 0;
+        z-index: 100;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        padding: 15px;
+        color: #111;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 150;
+    }
+
+    header.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 150;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Services Grid Scrollable with Alignment Fix */
+    
+
+    /* Partners Grid Scrollable with Alignment Fix */
+    .partners-grid {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping, force horizontal scroll */
+        gap: 20px;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding-bottom: 20px;
+        padding-left: 20px; /* Padding to prevent left-side clipping */
+        scroll-padding-left: 20px; /* Ensure there's a consistent starting point */
+    }
+
+    .partner-card {
+        min-width: 200px; /* Set minimum width for each partner card */
+        flex: 0 0 auto; /* Prevent shrinking */
+        scroll-snap-align: start; /* Ensures the cards align properly when scrolling */
+    }
+
+    /* Technologies Section Scrollable with Alignment Fix */
+    .tech-grid {
+        display: flex;
+        flex-wrap: nowrap; /* Prevent wrapping, force horizontal scroll */
+        gap: 20px;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding-bottom: 20px;
+        padding-left: 20px; /* Padding to prevent left-side clipping */
+        scroll-padding-left: 20px; /* Ensure there's a consistent starting point */
+    }
+
+    .tech-item {
+        min-width: 120px; /* Set minimum width for each tech item */
+        flex: 0 0 auto; /* Prevent shrinking */
+        scroll-snap-align: start; /* Ensures the items align properly when scrolling */
+    }
+
+    /* General styling for scrollable container to prevent clipping */
+     .partners-grid, .tech-grid {
+        scroll-snap-type: x mandatory; /* Enable snap scrolling for better UX */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        text-align: center;
+    }
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Aviation</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'assets/logo.jpg' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="{% static 'script.js' %}" defer></script>
+</head>
+
+<body>
+
+    {% if messages %}
+    <div class="messages-container">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <header>
+        <div class="brand">
+            <div class="logo-name">
+                <img src="{% static 'assets/logo.jpg' %}" alt="Logo" class="logo-icon">
+                <h1>RingAi<span class="trademark">®</span></h1>
+            </div>
+            <p class="typing-effect">Your safe business agent</p>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <!-- Hamburger icon -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navbar">
+            <a href="#services">Solutions</a>
+            <a href="#about">About us</a>
+            <a href="#tech">Tech</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="glow-text">AI</div>
+        <div class="cta">
+            <p>Flexibility and choice!</p>
+            <a href="#contact"><button>Be a partner</button></a>
+            <a href="#services"><button>What do we offer</button></a>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-block">
+            <div class="about-text">
+                <h3>Our Mission</h3>
+                <p>Our mission is to provide secure, innovative AI solutions that empower businesses to grow and succeed
+                    in a digital world. We focus on safety, transparency, speed, and social impact.</p>
+                <a href="#services">Learn more about our solutions &rarr;</a>
+            </div>
+            <div class="about-image">
+                <img src="{% static 'assets/images/about/starry-night.jpg' %}" alt="Our Mission">
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners-section">
+        <h2>Our Partners</h2>
+        <div class="partners-grid">
+            <div class="partner-card">
+                <a href="https://www.swiftlaunch.co/" target="_blank">
+                    <img src="{% static 'assets/images/partners/swift.png' %}" alt="SwiftLaunch" class="partner-logo">
+                </a>
+                <h3>SwiftLaunch</h3>
+                <p>Partner</p>
+            </div>
+            <div class="partner-card">
+                <a href="https://daryo.uz" target="_blank">
+                    <img src="{% static 'assets/images/partners/daryo.jpg' %}" alt="Daryo" class="partner-logo">
+                </a>
+                <h3>Daryo</h3>
+                <p>Communication</p>
+            </div>
+            <div class="partner-card">
+                <a href="https://raqobat.gov.uz/" target="_blank">
+                    <img src="{% static 'assets/images/partners/raqobat.jpg' %}"
+                        alt="Raqobatni rivojlantirish agentligi" class="partner-logo">
+                </a>
+                <h3>Raqobatni rivojlantirish agentligi</h3>
+                <p>Collaboration</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2 class="services-title">What do we offer?</h2>
+        <p class="services-subtitle">With experience in business solutions, we provide essential services tailored to
+            your needs.</p>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-media">
+                    <img src="{% static 'assets/images/offers/speed.jpg' %}" alt="Speed Image">
+                </div>
+                <div class="service-content">
+                    <h3>Speed</h3>
+                    <p class="secondary-text">Fast backend</p>
+                    <p class="supporting-text">We offer fast and quick response solutions to maintain conversation.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-media">
+                    <img src="{% static 'assets/images/offers/slinky_art.webp' %}" alt="Flexibility Image">
+                </div>
+                <div class="service-content">
+                    <h3>Flexibility</h3>
+                    <p class="secondary-text">Adaptable solutions</p>
+                    <p class="supporting-text">We offer adaptable solutions to fit your specific requirements, providing
+                        flexibility in every step.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-media">
+                    <img src="{% static 'assets/images/offers/affordness.webp' %}" alt="Affordable Pricing Image">
+                </div>
+                <div class="service-content">
+                    <h3>Affordable Pricing</h3>
+                    <p class="secondary-text">Best prices in the market</p>
+                    <p class="supporting-text">Get the best quality at competitive rates without breaking the bank.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-media">
+                    <img src="{% static 'assets/images/offers/smartness.webp' %}" alt="Smart Agent Image">
+                </div>
+                <div class="service-content">
+                    <h3>Smart Agent</h3>
+                    <p class="secondary-text">AI-powered support</p>
+                    <p class="supporting-text">Experience the convenience of our intelligent, AI-powered support agent,
+                        tailored to assist you.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-media">
+                    <img src="{% static 'assets/images/offers/easyness.webp' %}" alt="Easy Setup Image">
+                </div>
+                <div class="service-content">
+                    <h3>Easy Setup</h3>
+                    <p class="secondary-text">Quick and hassle-free</p>
+                    <p class="supporting-text">Get started quickly with our streamlined onboarding process designed for
+                        ease of use.</p>
+                </div>
+            </div>
+            <div class="service-item">
+                <div class="service-media">
+                    <img src="{% static 'assets/images/offers/continious.webp' %}" alt="Continuous Support Image">
+                </div>
+                <div class="service-content">
+                    <h3>Continuous Support</h3>
+                    <p class="secondary-text">24/7 technical assistance</p>
+                    <p class="supporting-text">Our team is here to support you around the clock, ensuring you have help
+                        whenever you need it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies-section" id="tech">
+        <h2>Tech stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <img src="{% static 'assets/images/techs/cpp_logo.png' %}" alt="C++">
+                <p>C++</p>
+            </div>
+            <div class="tech-item">
+                <img src="{% static 'assets/images/techs/go.png' %}" alt="Golang">
+                <p>Golang</p>
+            </div>
+            <div class="tech-item">
+                <img src="{% static 'assets/images/techs/python.png' %}" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="tech-item">
+                <img src="{% static 'assets/images/techs/flutter.png' %}" alt="Flutter">
+                <p>Flutter</p>
+            </div>
+            <div class="tech-item">
+                <img src="{% static 'assets/images/techs/postgresql.png' %}" alt="Postgresql">
+                <p>Postgresql</p>
+            </div>
+            <div class="tech-item">
+                <img src="{% static 'assets/images/techs/twilio.png' %}" alt="Twilio">
+                <p>Twilio</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact">
+        <div class="form-container">
+
+            <h2>Contact Us</h2>
+            <form method="POST" action="#">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="id_name">Name</label>
+                    {{ form.name }}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_phone">Phone Number</label>
+                    {{ form.phone }}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_email">Email</label>
+                    {{ form.email }}
+                </div>
+
+                <div class="form-group">
+                    <label for="id_message">Message</label>
+                    {{ form.message }}
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="{% static 'assets/logo.jpg' %}" alt="Logo" class="footer-logo">
+                <h2>RingAi<span class="trademark">®</span></h2>
+                <p>Your safe business agent, providing innovative AI solutions for your growth.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Solutions</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#tech">Tech Stack</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Telegram: <a href="https://t.me/Atamuratov_E">Egambergan</a></p>
+                <p>Phone: <a href="tel:+998 99 968 01 57 ">+998 99 968 01 57 </a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 RingAi. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.getElementById("hamburger");
+            const navbar = document.getElementById("navbar");
+            const header = document.querySelector("header");
+            const navLinks = navbar.querySelectorAll("a");
+
+            // Toggle the hamburger and navigation
+            hamburger.addEventListener("click", function () {
+                navbar.classList.toggle("active");
+                hamburger.classList.toggle("open");
+                header.classList.toggle("fixed");
+            });
+
+            // Close hamburger menu when a navigation link is clicked
+            navLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    navbar.classList.remove("active");
+                    hamburger.classList.remove("open");
+                    header.classList.remove("fixed");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
